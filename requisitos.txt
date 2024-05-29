@@ -1,2 +1,5 @@
 Rodar no bash da pasta o seguinte comando para gerar um certificado e chave SSL/TLS:
 openssl req -newkey rsa:2048 -nodes -keyout server_key.pem -x509 -days 365 -out server_cert.pem
+
+openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048
+openssl rsa -pubout -in private_key.pem -out public_key.pem
